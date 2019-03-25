@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			label{
+				height: 20px;
+				line-height: 20px;
+			}
+			textarea{
+				width: 100px;
+				height: 20px;
+			}
+			button{
+				vertical-align: top;
+			}
+			div{
+				width: 400px;
+				height: 400px;
+				background-color: powderblue;
+				border:1px solid ;
+			}
+		</style>
+	</head>
+	<body>
+		<lable>张三</lable>
+		<textarea name="message"  ></textarea>
+		<button>提交</button>
+		<div></div>
+		<script type="text/javascript">
+			var btn=document.getElementsByTagName("button")[0];
+			btn.onclick=function(){
+				//获取
+			var val=
+			document.getElementsByTagName("textarea")[0].value;
+				//追加
+			var div=
+			document.getElementsByTagName("div")[0];
+			div.innerHTML+="张三:"+"&nbsp;&nbsp;&nbsp;"+val+"<br/>";
+			//清空
+		document.getElementsByTagName("textarea")[0].value="";
+
+			}
+		</script>
+	</body>
+</html>
+

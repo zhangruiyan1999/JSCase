@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<!--<style type="text/css">
+			li.nth-child(2n){
+				background-color: yellow;
+			}
+			li.nth-child(2n+2){
+				background-color: gray;
+			}
+			li:hover{
+				background-color: red;
+			}
+		</style>-->
+	</head>
+	<body>
+	<ul>
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+	</ul>
+	<script type="text/javascript">
+		window.onload=function(){
+			var lis=document.getElementsByTagName("li");
+			for (var i=0;i<lis.length;i++) {
+				if (i%2==0) {
+					lis[i].style.backgroundColor="yellow";
+				} else{
+					lis[i].style.backgroundColor="red";
+				}
+				}
+				(function(i){
+					lis[i].onmouseover=function(){
+						lis[i].style.backgroundColor="green";
+					}
+					lis[i].onmouseout=function(){
+						if (i%2==0) {
+								lis[i].style.backgroundColor="yellow";
+						} else{
+								lis[i].style.backgroundColor="red";
+						}
+						}
+					})(i)
+		}
+	</script>
+	</body>
+</html>

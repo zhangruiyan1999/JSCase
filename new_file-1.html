@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+			<style type="text/css">
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			body{
+				background-image: url(img/1.jpg);
+			}
+			.box{
+				width: 1000px;
+				height: 100px;
+				margin: 0px auto;
+			}
+			img{
+				margin-top: 50px;
+				float: left;
+				width: 200px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="img/1.jpg"/>
+			<img src="img/2.jpg"/>
+			<img src="img/3.jpg"/>
+			<img src="img/4.jpg"/>
+			<img src="img/5.jpg"/>
+		</div>
+		<script type="text/javascript">
+			window.onload=function(){
+				var img=document.getElementsByTagName("img");
+                for(var i=0;i<img.length;i++) {
+		            (function(i){
+			          	img[i].onclick=function(e){
+				        	var imgurl=e.target.getAttribute("src")
+			            	document.body.style.backgroundImage="url("+imgurl+")"
+		             	}
+		            })(i)
+            }	}
+		</script>
+	</body>
+</html>
